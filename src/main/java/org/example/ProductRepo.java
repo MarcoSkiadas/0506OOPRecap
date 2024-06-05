@@ -20,22 +20,27 @@ public class ProductRepo {
     }
 
     public List<Product> getAllProducts() {
+        System.out.println("Listing all products: " + products.size() + " found.");
         return products;
     }
-    public Product getProduct(Product product) {
+    public Product getProduct(String productId) {
         for (Product p : products) {
-            if (p.equals(product)) {
-                return product;
+            if (p.product_id().equals(productId)) {
+                System.out.println("Product with ID " + productId + " retrieved.");
+                return p;
             }
 
         }
+        System.out.println("Product with ID " + productId + " not found.");
         return null;
     }
     public void addProduct(Product product) {
         products.add(product);
+        System.out.println("Product with ID " + product.product_id() + " added.");
     }
     public void removeProduct(Product product) {
         products.remove(product);
+        System.out.println("Product with ID " + product.product_id() + " removed.");
     }
 
 

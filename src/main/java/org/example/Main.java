@@ -12,8 +12,8 @@ public class Main {
         productRepo.addProduct(product2);
 
         System.out.println(productRepo.getAllProducts());
-        System.out.println(productRepo.getProduct(product1));
-        System.out.println(productRepo.getProduct(product3));
+        System.out.println(productRepo.getProduct("1"));
+        System.out.println(productRepo.getProduct("3"));
 
 
     }
