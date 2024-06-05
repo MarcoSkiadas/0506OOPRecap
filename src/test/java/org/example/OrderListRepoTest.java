@@ -52,14 +52,48 @@ class OrderListRepoTest {
     void getAllOrders_ShouldReturnAllOrders(){
         //Given
 
+
     }
     @Test
     void getOrders_ShouldReturnTrue_WhenCalledWithCorrectOrder(){
+        Product product1 = new Product("1","TV", 22,3);
+        Product product2 = new Product("2","PC",22,3);
+        List<Product> products = new ArrayList<>();
+        products.add(product1);
+        products.add(product2);
+
+        Order order2 = new Order("1","1",products,2);
+        Order order1 = new Order("2","2",products,1);
+
+        OrderListRepo repo = new OrderListRepo();
+
+        repo.addOrder(order2);
+        repo.addOrder(order1);
+
+        Order result = repo.getOrder("1");
+
+        assertEquals(order2,result);
 
     }
     @Test
     void getOrders_ShouldReturnFalse_WhenCalledWithIncorrectOrder() {
+        Product product1 = new Product("1","TV", 22,3);
+        Product product2 = new Product("2","PC",22,3);
+        List<Product> products = new ArrayList<>();
+        products.add(product1);
+        products.add(product2);
 
+        Order order2 = new Order("1","1",products,2);
+        Order order1 = new Order("2","2",products,1);
+
+        OrderListRepo repo = new OrderListRepo();
+
+        repo.addOrder(order2);
+        repo.addOrder(order1);
+
+        Order result = repo.getOrder("1");
+
+        assertNotEquals(order1,result);
     }
 
 }
