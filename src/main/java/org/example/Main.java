@@ -58,10 +58,13 @@ public class Main {
 
                     break;
                 case "list_Products":
+                    System.out.println("not ready yet. Under construction");
                     break;
                 case "place_Order":
+                    System.out.println("not ready yet. Under construction");
                     break;
                 case "list_orders":
+                    System.out.println("not ready yet. Under construction");
                     break;
                 case "quit":
                     System.out.println("Exiting the system.");
