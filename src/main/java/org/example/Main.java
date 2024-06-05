@@ -1,5 +1,8 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -14,6 +17,16 @@ public class Main {
         System.out.println(productRepo.getAllProducts());
         System.out.println(productRepo.getProduct("1"));
         System.out.println(productRepo.getProduct("3"));
+
+        OrderListRepo orderListRepo = new OrderListRepo();
+
+        ShopService shopService = new ShopService(orderListRepo,productRepo);
+
+        List<String> newOrder = new ArrayList<>();
+        newOrder.add("1");
+        newOrder.add("2");
+
+        shopService.placeNewOrder("1",newOrder);
 
 
     }
