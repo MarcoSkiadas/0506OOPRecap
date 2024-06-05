@@ -16,16 +16,14 @@ class ProductRepoTest {
     @Test
     void addProduct_shouldReturnTrue_WhenAddSameProduct() {
         //GIVEN
-        ProductRepo expected = new ProductRepo();
-        Product product1 = new Product("1","TV", 22,3);
-        Product product2 = new Product("1","TV", 22,3);
-        expected.addProduct(product1);
+        Product expected = new Product("1","TV", 22,3);
+        ProductRepo repo =new ProductRepo();
         //WHEN
 
-        ProductRepo actual = new ProductRepo();
-        actual.addProduct(product2);
+
+        repo.addProduct(expected);
         //THEN
-        assertEquals(expected, actual);
+        assertEquals(expected, repo.getProduct(expected.product_id()));
 
 
 

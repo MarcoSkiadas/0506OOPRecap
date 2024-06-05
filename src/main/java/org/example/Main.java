@@ -22,9 +22,12 @@ public class Main {
 
         ShopService shopService = new ShopService(orderListRepo,productRepo);
 
+        System.out.println();
+
         List<String> newOrder = new ArrayList<>();
         newOrder.add("1");
         newOrder.add("2");
+        System.out.println(newOrder);
 
         shopService.placeNewOrder("1",newOrder);
 

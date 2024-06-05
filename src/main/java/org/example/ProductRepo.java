@@ -42,30 +42,4 @@ public class ProductRepo {
         products.remove(product);
         System.out.println("Product with ID " + product.product_id() + " removed.");
     }
-
-
-
-
-
-
-
-    @Override
-    public String toString() {
-        return "ProductRepo{" +
-                "products=" + products +
-                '}';
     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        ProductRepo that = (ProductRepo) o;
-        return Objects.equals(products, that.products);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hashCode(products);
-    }
-}

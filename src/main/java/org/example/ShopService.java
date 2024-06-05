@@ -15,8 +15,8 @@ public class ShopService {
     private String nextOrderId = "1";
 
     public ShopService(OrderListRepo orderRepo, ProductRepo productRepo) {
-        this.orderRepo = new OrderListRepo();
-        this.productRepo = new ProductRepo();
+        this.orderRepo = orderRepo;
+        this.productRepo = productRepo;
     }
 
     public void placeNewOrder(String customerId, List<String> productsID){
@@ -29,10 +29,12 @@ public class ShopService {
                 items.add(product);
                 total_amount += product.price();
             }
-            System.out.println("Product with ID " + productID + " does not exist.");
-            return;
+            else {
+                System.out.println("Product with ID " + productID + " does not exist.");
+            }
         }
         Order order = new Order(nextOrderId+1,customerId,items,total_amount);
+        System.out.println(order);
     }
 
 }
