@@ -50,7 +50,23 @@ class OrderListRepoTest {
     }
     @Test
     void getAllOrders_ShouldReturnAllOrders(){
-        //Given
+        Product product1 = new Product("1","TV", 22,3);
+        Product product2 = new Product("2","PC",22,3);
+        List<Product> products = new ArrayList<>();
+        products.add(product1);
+        products.add(product2);
+
+        Order order2 = new Order("1","1",products,2);
+        Order order1 = new Order("2","2",products,1);
+
+        OrderListRepo repo = new OrderListRepo();
+
+        repo.addOrder(order2);
+        repo.addOrder(order1);
+
+        List<Order> result = repo.getAllOrders();
+
+        assertEquals(2, result.size());
 
 
     }
