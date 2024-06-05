@@ -11,9 +11,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class ProductRepoTest {
 
     @Test
-    void getProduct() {
-            }
-    @Test
     void addProduct_shouldReturnTrue_WhenAddSameProduct() {
         //GIVEN
         Product expected = new Product("1","TV", 22,3);
