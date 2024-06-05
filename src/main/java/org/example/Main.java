@@ -2,6 +2,19 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+        Product product1 = new Product("1","TV", 22.22F,3);
+        Product product2 = new Product("2","PC", 33.33F,2);
+        Product product3 = new Product("3","Laptop", 43.33F,2);
+
+        ProductRepo productRepo = new ProductRepo();
+        productRepo.addProduct(product1);
+        productRepo.addProduct(product2);
+
+        System.out.println(productRepo.getAllProducts());
+        System.out.println(productRepo.getProduct(product1));
+        System.out.println(productRepo.getProduct(product3));
+
+
     }
 }
