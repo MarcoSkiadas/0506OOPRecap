@@ -17,8 +17,8 @@ class ProductRepoTest {
     void addProduct_shouldReturnTrue_WhenAddSameProduct() {
         //GIVEN
         ProductRepo expected = new ProductRepo();
-        Product product1 = new Product("1","TV", 22.22F,3);
-        Product product2 = new Product("1","TV", 22.22F,3);
+        Product product1 = new Product("1","TV", 22,3);
+        Product product2 = new Product("1","TV", 22,3);
         expected.addProduct(product1);
         //WHEN
 
@@ -34,8 +34,8 @@ class ProductRepoTest {
     void removeProduct_shouldReturnTrue_WhenRemoveProduct() {
         //GIVEN
         ProductRepo expected = new ProductRepo();
-        Product product1 = new Product("1","TV", 22.22F,3);
-        Product product2 = new Product("1","TV", 22.22F,3);
+        Product product1 = new Product("1","TV", 22,3);
+        Product product2 = new Product("1","TV", 22,3);
         expected.addProduct(product1);
 
         //WHEN

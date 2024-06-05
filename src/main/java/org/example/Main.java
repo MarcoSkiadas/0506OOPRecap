@@ -3,9 +3,9 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
 
-        Product product1 = new Product("1","TV", 22.22F,3);
-        Product product2 = new Product("2","PC", 33.33F,2);
-        Product product3 = new Product("3","Laptop", 43.33F,2);
+        Product product1 = new Product("1","TV", 22,3);
+        Product product2 = new Product("2","PC", 33,2);
+        Product product3 = new Product("3","Laptop", 43,2);
 
         ProductRepo productRepo = new ProductRepo();
         productRepo.addProduct(product1);
